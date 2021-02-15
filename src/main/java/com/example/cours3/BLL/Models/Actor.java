@@ -11,11 +11,14 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "actor")
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 public class Actor implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @Column(name = "actor_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
