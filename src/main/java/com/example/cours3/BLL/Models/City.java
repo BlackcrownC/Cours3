@@ -1,9 +1,6 @@
 package com.example.cours3.BLL.Models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,8 +9,7 @@ import java.io.Serializable;
 @Table(name = "city")
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class City implements Serializable {
     @Id
     @Column(name = "city_id")

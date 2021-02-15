@@ -1,9 +1,6 @@
 package com.example.cours3.BLL.Models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -23,8 +20,7 @@ import java.io.Serializable;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -58,19 +54,4 @@ public class Customer implements Serializable {
 
     @Column(name = "last_update")
     private java.sql.Timestamp lastUpdate;
-
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "customerId=" + customerId +
-                ", store=" + store +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", address=" + address +
-                ", active=" + active +
-                ", createDate=" + createDate +
-                ", lastUpdate=" + lastUpdate +
-                '}';
-    }
 }
