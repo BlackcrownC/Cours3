@@ -46,7 +46,6 @@ public class Customer implements Serializable {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "address_id")
     @ManyToOne
     @JoinColumn(name = "address_id", referencedColumnName = "address_id")
     private Address address;

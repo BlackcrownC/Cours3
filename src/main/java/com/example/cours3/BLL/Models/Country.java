@@ -1,7 +1,9 @@
 package com.example.cours3.BLL.Models;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,6 +12,8 @@ import java.io.Serializable;
 @Table(name = "country")
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Country implements Serializable {
     @Id
     @Column(name = "country_id")
@@ -21,28 +25,4 @@ public class Country implements Serializable {
 
     @Column(name = "last_update")
     private java.sql.Timestamp lastUpdate;
-
-    public long getCountryId() {
-        return this.countryId;
-    }
-
-    public void setCountryId(long countryId) {
-        this.countryId = countryId;
-    }
-
-    public String getCountry() {
-        return this.country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public java.sql.Timestamp getLastUpdate() {
-        return this.lastUpdate;
-    }
-
-    public void setLastUpdate(java.sql.Timestamp lastUpdate) {
-        this.lastUpdate = lastUpdate;
-    }
 }

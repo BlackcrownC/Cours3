@@ -29,7 +29,6 @@ public class Address implements Serializable {
     @Column(name = "district")
     private String district;
 
-    @Column(name = "city_id")
     @ManyToOne
     @JoinColumn(name = "city_id", referencedColumnName = "city_id")
     private City city;
